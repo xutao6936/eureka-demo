@@ -74,7 +74,7 @@
                             <goal>build</goal>
                         </goals>
                     </execution>
-                    <execution>
+                    <!--<execution>
                         <id>tag-image</id>
                         <phase>package</phase>
                         <goals>
@@ -85,7 +85,7 @@
                             <newName>${docker.repostory}/${docker.registry.name}/${project.artifactId}:${project.version}</newName>
                         </configuration>
                     </execution>
-                    <!--<execution>
+                    <execution>
                         <id>push-image</id>
                         <phase>deploy</phase>
                         <goals>
@@ -102,7 +102,7 @@
                     <registryUrl>registry.cn-hangzhou.aliyuncs.com</registryUrl>
                     <!-- <forceTags>true</forceTags> -->
                     <!--install阶段也上传，否则只有deploy阶段上传-->
-                    <pushImage>true</pushImage>
+                    <pushImage>false</pushImage>
                     <dockerDirectory>target/docker</dockerDirectory>
                     <imageName>
                         ${docker.repostory}/${docker.registry.name}/${project.artifactId}:${project.version}
