@@ -85,7 +85,7 @@
                             <newName>${docker.repostory}/${docker.registry.name}/${project.artifactId}:${project.version}</newName>
                         </configuration>
                     </execution>
-                    <execution>
+                    <!--<execution>
                         <id>push-image</id>
                         <phase>deploy</phase>
                         <goals>
@@ -94,7 +94,7 @@
                         <configuration>
                             <imageName>${docker.repostory}/${docker.registry.name}/${project.artifactId}:${project.version}</imageName>
                         </configuration>
-                    </execution>    
+                    </execution> -->   
                 </executions>
                 <configuration>
                     <!-- 私有仓库配置，需要settings.xml文件配合serverId对应的服务地址 -->
@@ -110,7 +110,7 @@
                     <imageTags>
                         <!--docker的tag为项目版本号、latest-->
                         <imageTag>${git.commit.id.abbrev}</imageTag>
-                        <imageTag>latest</imageTag>
+                        <!--<imageTag>latest</imageTag>-->
                     </imageTags>
                     <resources>
                         <rescource><!-- 将打包文件放入dockerDirectory指定的位置 -->
