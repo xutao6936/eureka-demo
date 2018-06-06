@@ -5,8 +5,8 @@ MAINTAINER xutao "xutao6936@163.com"
 
 # 环境变量
 ENV WORK_PATH /home/project/dockerdemo
-ENV APP_NAME @project.build.finalName@.@project.packaging@
-ENV APP_VERSION @project.version@
+#ENV APP_NAME @project.build.finalName@.@project.packaging@
+#ENV APP_VERSION @project.version@
 
 EXPOSE 8761
 
@@ -33,4 +33,4 @@ WORKDIR $WORK_PATH
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom"]
 
 # CMD
-CMD ["-jar", "@project.build.finalName@.@project.packaging@"]
+CMD ["-jar", "eureka-server.jar"]
